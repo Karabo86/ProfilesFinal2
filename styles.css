@@ -1,0 +1,222 @@
+/* GENERAL */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #f4f8fc, #ffffff);
+  color: #333;
+}
+
+/* TOP BAR */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+  height: 120px;
+  width: auto;
+}
+
+/* WRAPPER */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION */
+.team-section {
+  padding: 10px 20px 50px;
+  text-align: center;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 34px;
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 50px 0 25px;
+  color: #1e5fa3;
+  position: relative;
+  font-size: 28px;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #1e90ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* TIER LABELS */
+.tier-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 14px;
+  border-radius: 20px;
+  margin: 18px 0 10px;
+}
+
+.tier-exec {
+  background: #0a3d62;
+  color: #ffffff;
+}
+
+.tier-senior {
+  background: #1e5fa3;
+  color: #ffffff;
+}
+
+.tier-manager {
+  background: #e3eef8;
+  color: #1e5fa3;
+}
+
+.tier-other {
+  background: #f0f4f8;
+  color: #555555;
+}
+
+/* GRID */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+/* CENTERED CONTAINER — 1 or 2 cards, same size as grid cards */
+.centered-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.centered-container .card {
+  width: 160px;
+  flex: 0 0 160px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* BLUE TOP LINE */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1e90ff, #0a3d62);
+}
+
+/* EXECUTIVE */
+.executive-card {
+  border: 2px solid #0a3d62;
+}
+
+.executive-card::before {
+  height: 6px;
+  background: linear-gradient(90deg, #0a3d62, #1e90ff);
+}
+
+/* SENIOR MANAGERS / HEADS */
+.senior-card {
+  border: 2px solid #1e90ff;
+}
+
+/* OTHER MANAGERS */
+.manager-card {
+  border: 1px solid #cfd9e6;
+}
+
+/* CARD IMAGE */
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* CARD TEXT */
+.card h3 {
+  margin: 12px 0 5px;
+  font-size: 16px;
+  color: #0a3d62;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  min-height: 38px;
+}
+
+/* EMAIL */
+.card-email {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #1e90ff;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.card-email:hover {
+  color: #0a3d62;
+  text-decoration: underline;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .card img {
+    height: 100px;
+  }
+
+}
